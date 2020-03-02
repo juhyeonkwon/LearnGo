@@ -14,7 +14,7 @@ type User struct {
 	Username string
 }
 
-func main() {
+func creatingModelNTables() {
 
 	//connection
 	db, err := gorm.Open("mysql", "golang:wngus123@tcp(127.0.0.1:3306)/golang?charset=utf8&parseTime=True&loc=Local")

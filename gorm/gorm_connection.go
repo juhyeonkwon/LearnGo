@@ -1,6 +1,5 @@
 package main
 
-/*
 import (
 	"log"
 
@@ -9,12 +8,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql" //You could import dialect
 )
 
-type User struct {
-	ID int
-	Username string
-}
-
-func main() {
+func connection() {
 	db, err := gorm.Open("mysql", "golang:wngus123@tcp(127.0.0.1:3306)/golang?charset=utf8&parseTime=True&loc=Local")
 
 	defer db.Close()
@@ -25,4 +19,3 @@ func main() {
 		log.Println("Connected!")
 	}
 }
-*/
