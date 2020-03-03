@@ -31,8 +31,7 @@ func main() {
 	//db.Create(user)
 
 	//여러개 insert
-
-	var users []UserModel = []UserModel{
+	/*var users []UserModel = []UserModel{
 		UserModel{Name: "kim", Address: "Seoul"},
 		UserModel{Name: "kwon", Address: "jinju"},
 	}
@@ -40,5 +39,24 @@ func main() {
 	for _, user := range users {
 		db.Create(&user)
 	}
+
+	*/
+
+	//Update
+	user := &UserModel{Name: "kim", Address: "Seoul"}
+
+	//1
+	db.Find(&user)          //select
+	user.Address = "munsan" //edit
+	db.Save(&user)          //save
+
+	//2
+	/*db.Model(&user).Update("name", "kwon")
+
+	db.Model(&user).Updates(
+		map[string]interface{}{
+			"name":    "aa",
+			"Address": "moonsan",
+		})*/
 
 }
